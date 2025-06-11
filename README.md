@@ -1,90 +1,110 @@
-# Application de Sélection d'Éléments
+# Application de Réservation de Restaurant
 
-Une application React avec Node.js permettant de gérer une liste d'éléments avec un système de sélection unique.
+Une application web moderne pour la gestion des réservations de restaurant, développée avec React.js et Node.js.
 
-## Fonctionnalités
+## 🚀 Fonctionnalités
 
-- 📋 Liste d'éléments interactifs
-- ✅ Sélection unique (un seul élément sélectionné à la fois)
-- ➕ Ajout de nouveaux éléments
-- 🗑️ Suppression d'éléments existants
-- 📱 Interface responsive
-- 🎨 Design moderne avec animations
+### Pour les Clients
+- 👤 Inscription et connexion sécurisées
+- 📖 Consultation du menu du restaurant
+- 📅 Création et gestion des réservations
+- 📱 Interface responsive et intuitive
+- 📊 Suivi des réservations en temps réel
 
-## Structure du Projet
+### Pour les Administrateurs
+- 🔑 Interface d'administration sécurisée
+- 📋 Gestion des réservations (confirmation, annulation)
+- 📊 Tableau de bord avec statistiques
+- 👥 Gestion des utilisateurs
 
-```
-├── server/          # Serveur Node.js + API
-│   ├── server.js    # Serveur principal
-│   └── package.json
-└── client/          # Application React
-    ├── public/
-    ├── src/
-    │   ├── components/
-    │   ├── App.js
-    │   └── index.js
-    └── package.json
-```
+## 🛠️ Technologies Utilisées
 
-## Installation et Démarrage
-
-### 1. Installer les dépendances du serveur
-
-```bash
-cd server
-npm install
-```
-
-### 2. Installer les dépendances du client
-
-```bash
-cd client
-npm install
-```
-
-### 3. Démarrer le serveur (Port 5000)
-
-```bash
-cd server
-npm start
-# ou pour le développement avec nodemon:
-npm run dev
-```
-
-### 4. Démarrer le client (Port 3000)
-
-```bash
-cd client
-npm start
-```
-
-L'application sera accessible sur `http://localhost:3000`
-
-## API Endpoints
-
-- `GET /api/items` - Récupérer tous les éléments
-- `GET /api/items/selected` - Récupérer l'élément sélectionné
-- `POST /api/items/:id/select` - Sélectionner un élément
-- `POST /api/items` - Ajouter un nouvel élément
-- `DELETE /api/items/:id` - Supprimer un élément
-
-## Technologies Utilisées
+### Frontend
+- React.js
+- React Router pour la navigation
+- Context API pour la gestion d'état
+- CSS moderne pour le style
 
 ### Backend
 - Node.js
 - Express.js
-- CORS
-- Body-parser
+- MySQL pour la base de données
+- JWT pour l'authentification
 
-### Frontend
-- React 18
-- JSX (pas de TypeScript)
-- CSS3 avec animations
-- Fetch API pour les requêtes
+## 📦 Installation
 
-## Configuration Simple
+1. Clonez le repository :
+```bash
+git clone https://github.com/nicolasryckelynck/Restaurant.git
+cd Restaurant
+```
 
-- Pas de webpack personnalisé (utilise Create React App)
-- Pas de fichiers .env 
-- Configuration minimale et directe
-- URLs codées en dur pour la simplicité 
+2. Installez les dépendances du serveur :
+```bash
+cd server
+npm install
+```
+
+3. Installez les dépendances du client :
+```bash
+cd ../client
+npm install
+```
+
+4. Configurez la base de données :
+- Créez une base de données MySQL
+- Copiez `.env.example` vers `.env` et configurez les variables d'environnement
+
+5. Initialisez la base de données :
+```bash
+cd ../server
+node init-db.js
+```
+
+## 🚀 Démarrage
+
+1. Démarrez le serveur :
+```bash
+cd server
+npm start
+```
+
+2. Dans un nouveau terminal, démarrez le client :
+```bash
+cd client
+npm start
+```
+
+L'application sera accessible à l'adresse : http://localhost:3000
+
+## 🔒 Variables d'Environnement
+
+### Serveur (.env)
+```
+DB_HOST=localhost
+DB_USER=votre_utilisateur
+DB_PASSWORD=votre_mot_de_passe
+DB_NAME=nom_de_la_base
+JWT_SECRET=votre_secret_jwt
+```
+
+### Client (.env)
+```
+REACT_APP_API_URL=http://localhost:5000
+```
+
+## 📱 Captures d'écran
+
+[À venir]
+
+## 👥 Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+## 📞 Contact
+
+Nicolas Ryckelynck - [GitHub](https://github.com/nicolasryckelynck) 
