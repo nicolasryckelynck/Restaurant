@@ -6,16 +6,16 @@ const bcrypt = require('bcrypt');
 const mysql = require('mysql2/promise');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const JWT_SECRET = 'mon-secret-jwt-super-secret';
 
 // Configuration MySQL
 const dbConfig = {
-    host: '127.0.0.1',
-    user: 'root',
-    password: '',
-    port: 8111,
-    database: 'restaurant_db'
+  host: process.env.DB_HOST     || '127.0.0.1',
+  user: process.env.DB_USER     || 'root',
+  password: process.env.DB_PASS || '',
+  port: process.env.DB_PORT     || 8111,
+  database: process.env.DB_NAME || 'restaurant_db'
 };
 
 // Création du pool de connexions
